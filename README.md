@@ -36,7 +36,7 @@ general_sdk_grpc_asr
 │  
 ├─resource								    # 保存测试音频,https所需要证书文件目录
 │  ├─audio									# 测试音频文件目录 
-│  └─root.pem								# 根证书文件，gprc协议需要
+│  └─roots.pem								# 根证书文件，gprc协议需要
 │                                 
 ├─src		                                # 测试Demo源代码目录				
 │  └─grpc_asr.cpp                           # grpc协议在线语音识别Demo
