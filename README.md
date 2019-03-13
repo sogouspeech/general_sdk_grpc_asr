@@ -127,22 +127,22 @@ CMake(K)->调动和启动设置(L)->grpc_asr_demo.exe打开launch.vs.json,请按
 
 CMake(K)->全部重新生成(R)编译Demo工程<br>
 
-如果开发者选择是x86-Debug平台，请将general_sdk_grpc_asr/lib/Windows/x86下的libprotobuf.dll和ssasr.dll复制到build/x86-debug目录下，grpc_asr_demo.exe运行时依赖这2个库;选择启动项下拉选择grpc_asr_demo运行测试demo;x64平台通x86平台操作一致。
+如果开发者选择是x86-Debug平台，请将general_sdk_grpc_asr/lib/Windows/x86下的libprotobuf.dll和ssasr.dll复制到build/x86-debug目录下，grpc_asr_demo.exe运行时依赖这2个库;选择启动项下拉选择grpc_asr_demo运行测试demo;x64平台和x86平台操作一致。
 
 
 ## Linux平台下编译grpc协议在线语音识别Demo
 
 请按以下命令编译grpc协议在线语音识别Demo
 ```
-	cd general_sdk_grpc_asr
-	//如果是x64将"cp lib/Linux/x86/libssasr.so /usr/local/lib"替换成"cp lib/Linux/x64/libssasr.so /usr/local/lib"
-	cp lib/Linux/x86/libssasr.so /usr/local/lib
-	cp include/* /usr/local/include
-	mkdir build
-	cp -R resource/audio ./build
-	cp resource/roots.pem ./build 
-	cd build
-	cmake ..
-	make
-	./grpc_asr_demo 
+cd general_sdk_grpc_asr
+//如果是x64将"cp lib/Linux/x86/libssasr.so /usr/local/lib"替换成"cp lib/Linux/x64/libssasr.so /usr/local/lib"
+cp lib/Linux/x86/libssasr.so /usr/local/lib
+cp include/* /usr/local/include
+mkdir build
+cp -R resource/audio ./build
+cp resource/roots.pem ./build 
+cd build
+cmake ..
+make
+./grpc_asr_demo 
 ```
